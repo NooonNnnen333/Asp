@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MoviesAPI;
 using Npgsql;
 
-var builder = WebApplication.CreateBuilder();
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<MovieContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MovieDbCS"))); 
