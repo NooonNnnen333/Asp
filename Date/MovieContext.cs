@@ -30,6 +30,14 @@ public class MovieContext(DbContextOptions<MovieContext> options) : DbContext
         );
     }
     
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseNpgsql("Host=localhost;Database=moviesdb;Username=postgres;Password=yourpassword");
+        }
+    }
+
     
     
 } 
