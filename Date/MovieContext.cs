@@ -4,11 +4,14 @@ using MoviesAPI.Entities;
 
 namespace MoviesAPI;
 
-public class MovieContext : DbContext
+public class MovieContext(DbContextOptions<MovieContext> options) : DbContext(options)
 {
-    public MovieContext(DbContextOptions<MovieContext> options) : base(options) { }
+    // Также допустим другой вариант иницилизации
+    // public MovieContext(DbContextOptions<MovieContext> options) : base(options) { }
+    
+    public DbSet<Move> Movies { get; set; }
+    public DbSet<Genre> Genres { get; set; }
 
-    /*
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Genre>().HasData(
@@ -16,11 +19,8 @@ public class MovieContext : DbContext
             new Genre { Id = 2, Name = "Fascizm" },
             new Genre {Id = 3, Name = "Socialism"}
             );
-        
 
     }
-    */
-    
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -29,7 +29,6 @@ public class MovieContext : DbContext
             optionsBuilder.UseNpgsql("Host=127.0.0.1;Port=5432;Database=moviesdb;Username=postgres;Password=postgres");
         }
     }
-
-    public DbSet<Move> Movies { get; set; }
-    public DbSet<Genre> Genres { get; set; }
+    
+    
 }

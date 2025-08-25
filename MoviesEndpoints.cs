@@ -9,7 +9,7 @@ public static class MoviesEndpoints
         var group = app.MapGroup("movies");
 
         group.MapGet("/",
-            async (MovieContext movieContext) => await movieContext.Movies.Include("Genre").ToListAsync());
+            async (MovieContext movieContext) => await movieContext.Genres.Include("Name").ToListAsync());
         return group;
     }
     
