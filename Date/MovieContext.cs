@@ -8,6 +8,20 @@ public class MovieContext : DbContext
 {
     public MovieContext(DbContextOptions<MovieContext> options) : base(options) { }
 
+    /*
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Genre>().HasData(
+            new Genre { Id = 1, Name = "Nacizm" },
+            new Genre { Id = 2, Name = "Fascizm" },
+            new Genre {Id = 3, Name = "Socialism"}
+            );
+        
+
+    }
+    */
+    
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
