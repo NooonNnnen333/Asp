@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -21,6 +22,11 @@ namespace MoviesAPI.Migrations
                     { 2, "Fascizm" },
                     { 3, "Socialism" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Movies",
+                columns: new[] { "Id", "GenereId", "Name", "Price", "RealisDate" },
+                values: new object[] { 14, 1, "Cewrv", 999m, new DateOnly(1990, 5, 20) });
         }
 
         /// <inheritdoc />
@@ -40,6 +46,12 @@ namespace MoviesAPI.Migrations
                 table: "Genres",
                 keyColumn: "Id",
                 keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Movies",
+                keyColumn: "Id",
+                keyValue: 14);
         }
     }
 }
+

@@ -86,6 +86,16 @@ namespace MoviesAPI.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 14,
+                            GenereId = 1,
+                            Name = "Cewrv",
+                            Price = 999m,
+                            RealisDate = new DateOnly(1990, 5, 20)
+                        });
                 });
 
             modelBuilder.Entity("MoviesAPI.Entities.Move", b =>
