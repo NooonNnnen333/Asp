@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using MoviesAPI.Entities;
@@ -17,9 +18,19 @@ public class MovieContext(DbContextOptions<MovieContext> options) : DbContext(op
         modelBuilder.Entity<Genre>().HasData(
             new Genre { Id = 1, Name = "Nacizm" },
             new Genre { Id = 2, Name = "Fascizm" },
-            new Genre {Id = 3, Name = "Socialism"}
-            );
+            new Genre { Id = 3, Name = "Socialism" }
+        );
 
+        modelBuilder.Entity<Move>().HasData(
+            new Move
+            {
+                Id = 14,
+                Name = "Cewrv",
+                Price = 999,
+                GenereId = 1,
+                RealisDate = new DateOnly(1990, 5, 20)
+            }
+        );
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

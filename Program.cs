@@ -31,7 +31,4 @@ using (var scope = app.Services.CreateScope())
 
 app.MapGet("/", () => "Hello World!");
 app.MapMoviesEndpoint();
-
-
-
 app.Run();
