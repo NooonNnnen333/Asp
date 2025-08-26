@@ -19,6 +19,17 @@ public class MovieContext(DbContextOptions<MovieContext> options) : DbContext(op
             new Genre { Id = 2, Name = "Fascizm" },
             new Genre {Id = 3, Name = "Socialism"}
             );
+        
+        modelBuilder.Entity<Move>().HasData(
+            new Move
+            {
+                Id = 14,
+                Name = "Cewrv",
+                Price = 999,
+                GenereId = 1,
+                RealisDate = new DateOnly(1990, 5, 20)
+            }
+        );
 
     }
     
