@@ -11,6 +11,17 @@ public static class MoviesEndpoints
         group.MapGet("/",
             async (MovieContext movieContext) => await movieContext.Movies.Include("Genre").ToListAsync());
         return group;
+
+        group.MapGet("/",
+            async (MovieContext movieContext, int id) =>
+            {
+
+                Movie? movie = await movieContext.Movies.Include("Genre").FirstOrDefault(x => x.Id == id);
+                return movie is null ? Results.NotFound() : Results.Ok(movie);
+
+            }
+        );
+        
     }
     
     

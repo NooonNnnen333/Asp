@@ -4,6 +4,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace MoviesAPI.Migrations
 {
     /// <inheritdoc />
@@ -46,6 +48,21 @@ namespace MoviesAPI.Migrations
                         principalTable: "Genres",
                         principalColumn: "Id");
                 });
+
+            migrationBuilder.InsertData(
+                table: "Genres",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Nacizm" },
+                    { 2, "Fascizm" },
+                    { 3, "Socialism" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Movies",
+                columns: new[] { "Id", "GenereId", "GenreId", "Name", "Price", "RealisDate" },
+                values: new object[] { 14, 1, null, "Cewrv", 999m, new DateOnly(1990, 5, 20) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Movies_GenreId",
