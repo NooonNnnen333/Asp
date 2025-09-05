@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MoviesAPI.Entities;
 
 namespace MoviesAPI;
 
@@ -12,16 +13,17 @@ public static class MoviesEndpoints
             async (MovieContext movieContext) => await movieContext.Movies.Include("Genre").ToListAsync());
         return group;
 
-        group.MapGet("/",
+        group.MapGet("/{id}",
             async (MovieContext movieContext, int id) =>
             {
 
-                Movie? movie = await movieContext.Movies.Include("Genre").FirstOrDefault(x => x.Id == id);
+                Move? movie = await movieContext.Movies.Include("Genre").FirstOrDefaultAsync(x => x.Id == id);
                 return movie is null ? Results.NotFound() : Results.Ok(movie);
 
             }
         );
-        
+
+        return group;
     }
     
     
