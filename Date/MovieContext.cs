@@ -9,7 +9,7 @@ public class MovieContext(DbContextOptions<MovieContext> options) : DbContext(op
     // Также допустим другой вариант иницилизации
     // public MovieContext(DbContextOptions<MovieContext> options) : base(options) { }
     
-    public DbSet<Move> Movies { get; set; }
+    public DbSet<movie> Movies { get; set; }
     public DbSet<Genre> Genres { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -20,14 +20,33 @@ public class MovieContext(DbContextOptions<MovieContext> options) : DbContext(op
             new Genre {Id = 3, Name = "Socialism"}
             );
         
-        modelBuilder.Entity<Move>().HasData(
-            new Move
+        
+        modelBuilder.Entity<movie>().HasData(
+            new movie
             {
                 Id = 14,
                 Name = "Cewrv",
                 Price = 999,
                 GenereId = 1,
                 RealisDate = new DateOnly(1990, 5, 20)
+            },
+            
+        new movie
+            {
+                Id = 9,
+                Name = "MyCampf",
+                Price = 999,
+                GenereId = 1,
+                RealisDate = new DateOnly(1991, 5, 20)
+            },
+            
+        new movie
+            {
+                Id = 15,
+                Name = "Film",
+                Price = 999,
+                GenereId = 1,
+                RealisDate = new DateOnly(2001, 5, 20)
             }
         );
 

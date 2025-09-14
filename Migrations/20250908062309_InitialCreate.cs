@@ -62,7 +62,12 @@ namespace MoviesAPI.Migrations
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "GenereId", "GenreId", "Name", "Price", "RealisDate" },
-                values: new object[] { 14, 1, null, "Cewrv", 999m, new DateOnly(1990, 5, 20) });
+                values: new object[,]
+                {
+                    { 9, 1, null, "MyCampf", 999m, new DateOnly(1991, 5, 20) },
+                    { 14, 1, null, "Cewrv", 999m, new DateOnly(1990, 5, 20) },
+                    { 15, 1, null, "Film", 999m, new DateOnly(2001, 5, 20) }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Movies_GenreId",

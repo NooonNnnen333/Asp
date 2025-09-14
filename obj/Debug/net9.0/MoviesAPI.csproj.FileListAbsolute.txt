@@ -158,3 +158,10 @@
 /Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/obj/Debug/net9.0/MoviesAPI.pdb
 /Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/obj/Debug/net9.0/MoviesAPI.genruntimeconfig.cache
 /Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/obj/Debug/net9.0/ref/MoviesAPI.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/bin/Debug/net9.0/MinimalApi.Endpoint.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/bin/Debug/net9.0/MinimalApis.Extensions.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/bin/Debug/net9.0/MiniValidation.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/obj/Debug/net9.0/MoviesAPI.MvcApplicationPartsAssemblyInfo.cs

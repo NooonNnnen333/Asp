@@ -56,7 +56,7 @@ namespace MoviesAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("MoviesAPI.Entities.Move", b =>
+            modelBuilder.Entity("MoviesAPI.Entities.movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,10 +95,26 @@ namespace MoviesAPI.Migrations
                             Name = "Cewrv",
                             Price = 999m,
                             RealisDate = new DateOnly(1990, 5, 20)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            GenereId = 1,
+                            Name = "MyCampf",
+                            Price = 999m,
+                            RealisDate = new DateOnly(1991, 5, 20)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            GenereId = 1,
+                            Name = "Film",
+                            Price = 999m,
+                            RealisDate = new DateOnly(2001, 5, 20)
                         });
                 });
 
-            modelBuilder.Entity("MoviesAPI.Entities.Move", b =>
+            modelBuilder.Entity("MoviesAPI.Entities.movie", b =>
                 {
                     b.HasOne("MoviesAPI.Entities.Genre", "Genre")
                         .WithMany()

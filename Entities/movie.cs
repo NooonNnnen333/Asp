@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace MoviesAPI.Entities;
 
-public class Move
+public class movie
 {
     public int Id { get; set; }
 

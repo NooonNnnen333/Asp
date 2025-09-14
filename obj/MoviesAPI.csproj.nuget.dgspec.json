@@ -55,6 +55,14 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "MinimalApi.Endpoint": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "MinimalApis.Extensions": {
+              "target": "Package",
+              "version": "[0.11.0, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.3, )"

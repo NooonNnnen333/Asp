@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MoviesAPI.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20250826195423_InitialCreate")]
+    [Migration("20250908062309_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -98,6 +98,22 @@ namespace MoviesAPI.Migrations
                             Name = "Cewrv",
                             Price = 999m,
                             RealisDate = new DateOnly(1990, 5, 20)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            GenereId = 1,
+                            Name = "MyCampf",
+                            Price = 999m,
+                            RealisDate = new DateOnly(1991, 5, 20)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            GenereId = 1,
+                            Name = "Film",
+                            Price = 999m,
+                            RealisDate = new DateOnly(2001, 5, 20)
                         });
                 });
 
