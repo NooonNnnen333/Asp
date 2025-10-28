@@ -4961,11 +4961,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/MoviesAPI.csproj",
-      "projectName": "MoviesAPI",
-      "projectPath": "/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/MoviesAPI.csproj",
+      "projectUniqueName": "/Users/egorvasilev/RiderProjects/AspProject/Asp/Asp.csproj",
+      "projectName": "Asp",
+      "projectPath": "/Users/egorvasilev/RiderProjects/AspProject/Asp/Asp.csproj",
       "packagesPath": "/Users/egorvasilev/.nuget/packages/",
-      "outputPath": "/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/obj/",
+      "outputPath": "/Users/egorvasilev/RiderProjects/AspProject/Asp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/egorvasilev/.nuget/NuGet/NuGet.Config"
@@ -4974,7 +4974,6 @@
         "net9.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5045,7 +5044,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

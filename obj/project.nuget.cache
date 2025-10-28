@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+OoUgm0fsqM=",
+  "dgSpecHash": "r0BReWrl1nI=",
   "success": true,
-  "projectFilePath": "/Users/egorvasilev/RiderProjects/AspNET/MoviesAPI/MoviesAPI.csproj",
+  "projectFilePath": "/Users/egorvasilev/RiderProjects/AspProject/Asp/Asp.csproj",
   "expectedPackageFiles": [
     "/Users/egorvasilev/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/egorvasilev/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",

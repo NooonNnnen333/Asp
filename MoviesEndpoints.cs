@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using MoviesAPI.Entities;
+using Asp.Entities;
 
-namespace MoviesAPI;
+namespace Asp;
 
 public static class MoviesEndpoints
 {

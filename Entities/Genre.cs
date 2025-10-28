@@ -1,4 +1,4 @@
-namespace MoviesAPI.Entities;
+namespace Asp.Entities;
 
 public class Genre
 {

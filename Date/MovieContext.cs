@@ -1,8 +1,8 @@
+using Asp.Entities;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
-using MoviesAPI.Entities;
 
-namespace MoviesAPI;
+namespace Asp;
 
 public class MovieContext(DbContextOptions<MovieContext> options) : DbContext(options)
 {

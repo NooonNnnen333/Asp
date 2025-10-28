@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace MoviesAPI.Entities;
+namespace Asp.Entities;
 
 public class movie
 {
