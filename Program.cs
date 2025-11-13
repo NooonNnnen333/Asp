@@ -17,6 +17,8 @@ app.MapMoviesEndpoint();
 
 using (var scope = app.Services.CreateScope())
 {
+    var services = scope.ServiceProvider;
+    
     var db = scope.ServiceProvider.GetRequiredService<MovieContext>();
     await db.Database.MigrateAsync();
     Console.WriteLine("✅ Миграции применены");
