@@ -1,0 +1,19 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  web:
+    build:
+      context: "/Users/egorvasilev/RiderProjects/AspProject"
+      dockerfile: "Asp/Dockerfile"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/Asp.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "asp:dev"
+    ports: []
+    volumes:
+    - "/Users/egorvasilev/RiderProjects/AspProject/Asp:/app:rw"
+    - "/Users/egorvasilev/RiderProjects/AspProject:/src:rw"
+    - "/Users/egorvasilev/.nuget/packages:/root/.nuget/packages"
+    working_dir: "/app"
